@@ -84,7 +84,7 @@ function App() {
             </section>
 
             <footer className="wrap footer">
-                <p>© <span>{new Date().getFullYear()}</span> JACK.FUN — built fast with ♥</p>
+                <p>© <span>{new Date().getFullYear()}</span> JACKZ.FUN — built fast with ♥</p>
             </footer>
         </>
     )
