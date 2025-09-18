@@ -60,16 +60,19 @@ function App() {
 
             <section id="links" className="wrap cards">
                 <a className="card" href="#" target="_blank" rel="noopener">
-                    <h3>🧻 Whitepaper</h3>
-                    <p>Nobody reads these, but it makes us look smart. 🤣</p>
+                    <h3>🧻 Whitepaper (lol)</h3>
+                    <p>No PDF flex here — the “plan” is vibes, memes, and an NFT drop cooking in the back room. Collect Jackz pixels, flex them in the chat, and maybe unlock some degen perks down the line. Roadmap? More like road-ish… but we’re building.</p>
                 </a>
                 <a className="card" href="#" target="_blank" rel="noopener">
                     <h3>📈 DexTools / Birdeye</h3>
-                    <p>Charts going up, bags going down. Cope together.</p>
+                    <p>Live chart, liquidity, and volume. See who’s dumping, who’s coping, and where support really is. Useful for tracking entries/exits without pretending you “don’t look at price.”
+                        👉 Open DexTools | Open Birdeye
+                    </p>
                 </a>
                 <a className="card" href="#" target="_blank" rel="noopener">
-                    <h3>🚀 Jupiter</h3>
-                    <p>Trade in one tap. Moon or rug, we don’t judge.</p>
+                    <h3>🚀 Jupyter</h3>
+                    <p>Buy JACKZ in one tap with SOL. Slippage tips included so you don’t fumble the bag. Fast, simple, and you keep custody — moon or rug, your choice, your wallet.
+                        👉 Swap on Jupyter</p>
                 </a>
             </section>
 
