@@ -30,7 +30,7 @@ function App() {
         <div className="hero-copy">
           <h1>Jackz on Sol</h1>
           <p className="lead">
-            Simple site. Loads fast. Works on <strong>phone</strong>, <strong>desktop</strong>, and <strong>laptop</strong>. No fluff — just the essentials.
+            <strong>Jackz</strong> is the dysfunctional pack of pumpkins — a degen-coded, faith-sprinkled community project built on love, chaos, and fun. Holders aren’t just in the trenches, they’re in the patches — where every <strong>Jackz</strong> has a persona, a vibe and a story. Welcome to the Patches!
           </p>
           <div className="btn-row">
             <a className="btn" href="https://t.me/jackz" target="_blank" rel="noopener">Telegram</a>
