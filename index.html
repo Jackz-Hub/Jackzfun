@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JACK • fun on Sol</title>
+  <meta name="description" content="JACK — a lightweight, fast landing for the Jackz On Sol community." />
+  <meta property="og:title" content="JACK • fun on Sol" />
+  <meta property="og:description" content="Jackz On Sol — simple, fast, everywhere." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og.png" />
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="preload" href="/assets/jetbrains-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    /* Fallback if styles.css fails to load */
+    .btn{display:inline-block;padding:.9rem 1.1rem;border:1px solid #2f2f2f;border-radius:10px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header class="wrap header">
+    <a class="brand" href="/"><img src="/assets/favicon.png" alt="Jack logo"/><span>JACK.FUN</span></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#links">Links</a>
+      <a class="btn cta" href="#cta">Mint / Buy</a>
+    </nav>
+  </header>
+
+  <main class="wrap hero">
+    <div class="hero-copy">
+      <h1>Jackz on Sol</h1>
+      <p class="lead">Simple site. Loads fast. Works on <strong>phone</strong>, <strong>desktop</strong>, and <strong>laptop</strong>. No fluff — just the essentials.</p>
+      <div class="btn-row">
+        <a class="btn" href="https://t.me/jackz" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn" href="https://x.com/" target="_blank" rel="noopener">X / Twitter</a>
+        <a class="btn primary" href="#cta">Mint / Buy</a>
+      </div>
+      <p class="tiny">CA: <span id="ca">TBD</span> <button class="copy" aria-label="Copy contract address">Copy</button></p>
+    </div>
+    <div class="hero-art">
+      <img src="/assets/hero.png" alt="Jackz pixel hero" />
+    </div>
+  </main>
+
+  <section id="about" class="wrap section">
+    <h2>About</h2>
+    <p>JACK is a playful, community-led project. This site is a single-file landing you can host anywhere (Vercel, GitHub Pages, Netlify). Swap links + graphics and ship.</p>
+  </section>
+
+  <section id="links" class="wrap cards">
+    <a class="card" href="#" target="_blank" rel="noopener">
+      <h3>Whitepaper / Notion</h3>
+      <p>Short write-up for curious folks.</p>
+    </a>
+    <a class="card" href="#" target="_blank" rel="noopener">
+      <h3>Dextools / Birdeye</h3>
+      <p>Live chart + liquidity.</p>
+    </a>
+    <a class="card" href="#" target="_blank" rel="noopener">
+      <h3>Jupiter</h3>
+      <p>Trade on Solana in one tap.</p>
+    </a>
+  </section>
+
+  <section id="cta" class="wrap section center">
+    <h2>Ready?</h2>
+    <p>Point your mint or DEX link here. Button updates in one line.</p>
+    <p><a class="btn primary big" href="#" target="_blank" rel="noopener">Buy on Jupiter</a></p>
+    <p class="tiny">Not financial advice. Do your own research.</p>
+  </section>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> JACK.FUN — built fast with ♥</p>
+  </footer>
+
+  <script>
+    // Copy CA button (replace with your real CA)
+    const ca = "So1anaContractGoesHereDontForget";
+    document.getElementById("ca").textContent = ca;
+    document.querySelector(".copy").addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(ca); alert("Contract copied!"); }
+      catch(e){ console.log(e) }
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
