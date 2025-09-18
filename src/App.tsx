@@ -17,7 +17,7 @@ function App() {
       <header className="wrap header">
         <a className="brand" href="/">
           <img src="/favicon.png" alt="Jack logo" />
-          <span>JACK.FUN</span>
+          <span>JACKZ.FUN</span>
         </a>
         <nav className="nav">
           <a href="#about">About</a>
