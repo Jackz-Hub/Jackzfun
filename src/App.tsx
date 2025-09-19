@@ -1,6 +1,7 @@
-import JackzHero from './assets/images/jackz.png'
+import JackzHero from "./assets/jackz.png"
 
 function App() {
+    console.log('JackzHero import:', JackzHero);
     const ca = 'So1anaContractGoesHereDontForget'
 
     const copyCa = async () => {
