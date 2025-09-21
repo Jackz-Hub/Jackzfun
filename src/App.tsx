@@ -1,10 +1,19 @@
+import React from 'react'
 import JackzHero from "./assets/jackz.png"
 import Jupiter from "./assets/jup_ag.png"
+import ChiefJackz from "./assets/chief_jackz.png"
 import { FaDiscord, FaTwitter } from 'react-icons/fa'
 
 function App() {
     console.log('JackzHero import:', JackzHero);
     const ca = 'ea11r8Nzg8cj2jUNBiq9Xv3tJojJDUjVdvp3uFaLu3q'
+
+    const nftData = [
+        { image: ChiefJackz, title: "$JACKZ Alpha Mint 🍳🎃", description: "The chef is here. First drop, first recipe. Cook this Alpha and claim your spot at the table.", status: "available", mintText: "Cook Now 🔥", mintLink: "https://launchmynft.io/sol/20256" },
+        { image: JackzHero, title: "Jackz #002", description: "The original chaotic pumpkin with latte addiction and better fashion sense.", status: "coming_soon", mintText: "Coming Soon", mintLink: "#" },
+        { image: JackzHero, title: "Jackz #003", description: "Sassy digital twin ready to troll the adults.", status: "coming_soon", mintText: "Coming Soon", mintLink: "#" },
+        { image: JackzHero, title: "Jackz #004", description: "Fashion-forward pumpkin with crypto dreams.", status: "coming_soon", mintText: "Coming Soon", mintLink: "#" }
+    ];
 
     const copyCa = async () => {
         try {
@@ -84,6 +93,30 @@ function App() {
                     <p>Buy JACKZ in one tap with SOL. Slippage tips included so you don’t fumble the bag. Fast, simple, and you keep custody — moon or rug, your choice, your wallet.
                         👉 Swap on Jupiter</p>
                 </a>
+            </section>
+            <section className="wrap section nft-preview">
+                <h2>NFT Preview</h2>
+                <div className="overflow-x-auto">
+                    <div className="flex space-x-6 pb-4">
+                        {nftData.map((nft, index) => (
+                            <div key={index} className="flex-shrink-0 w-64">
+                                <div className="relative">
+                                    <img src={nft.image} alt={nft.title} className={`w-full h-48 object-cover rounded-lg mb-4 ${nft.status === 'coming_soon' ? 'blur-sm' : ''}`} />
+                                    {nft.status === 'coming_soon' && (
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <span className="bg-black bg-opacity-75 text-white px-4 py-2 rounded-lg text-lg font-bold">Coming Soon</span>
+                                        </div>
+                                    )}
+                                </div>
+                                <h3 className="text-lg font-bold mb-2">{nft.title}</h3>
+                                <p className="text-sm mb-4">{nft.description}</p>
+                                <a href={nft.mintLink} className={`btn ${nft.status === 'available' ? 'primary' : 'disabled'}`} target="_blank" rel="noopener" onClick={nft.mintLink === "#" ? (e) => e.preventDefault() : undefined}>
+                                    {nft.mintText}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
             <section className="wrap section social-links">
                 <h2>Join the Community</h2>
